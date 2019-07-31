@@ -7,13 +7,13 @@ var partitionLabels = function(S) {
         dict[S[i].charCodeAt(0) - 'a'.charCodeAt(0)] = i;
     }
 
-    let res = [], begin = 0, end = 0;
+    let result = [], start = 0, end = 0;
     for(let i = 0; i < S.length; i++) {
         end = Math.max(end, dict[S[i].charCodeAt(0) - 'a'.charCodeAt(0)]);
         if(i === end) {
-            res.push(end - begin + 1);
-            begin = i + 1;
+            result.push(end - start + 1);
+            start = i + 1;
         }
     }
-    return res;
+    return result;
 };
