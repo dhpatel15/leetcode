@@ -1,5 +1,4 @@
 var groupAnagrams = function(strs) {
-    strs = strs.sort();
     var mapping = {};
     for (var i = 0; i < strs.length; i++) {
         var str = strs[i];
